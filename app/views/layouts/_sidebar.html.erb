@@ -1,0 +1,10 @@
+ <ul class="nav nav-list">
+  <% if @categories %>
+      <% @categories.each do |cat| %>
+        <li class="nav-head"><%=  cat.name%></li>
+          <% cat.forums.each do |f| %>
+          <li><%=  f.name%></li>
+        <% end %>
+      <% end %>
+      <% end %>
+    </ul>
